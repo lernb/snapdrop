@@ -12,7 +12,8 @@ process.on('SIGTERM', () => {
 })
 
 const parser = require('ua-parser-js');
-const { uniqueNamesGenerator, animals, colors } = require('unique-names-generator');
+// const { uniqueNamesGenerator, animals, colors } = require('unique-names-generator');
+const { generateRandomChineseName } = require('random-chinese-name-generator')
 
 class SnapdropServer {
 
@@ -221,15 +222,16 @@ class Peer {
         }
 
         if(!deviceName)
-            deviceName = 'Unknown Device';
+            // deviceName = 'Unknown Device';
+            deviceName = '未知设备';
 
-        const displayName = uniqueNamesGenerator({
-            length: 2,
-            separator: ' ',
-            dictionaries: [colors, animals],
-            style: 'capital',
-            seed: this.id.hashCode()
-        })
+        // const displayName = uniqueNamesGenerator({
+        //     length: 2,
+        //     separator: ' ',
+        //     dictionaries: [colors, animals],
+        //     style: 'capital',
+        //     seed: this.id.hashCode()
+        // })
 
         this.name = {
             model: ua.device.model,
@@ -237,7 +239,7 @@ class Peer {
             browser: ua.browser.name,
             type: ua.device.type,
             deviceName,
-            displayName
+            displayName: generateRandomChineseName()
         };
     }
 

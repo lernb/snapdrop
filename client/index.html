@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="utf-8">
@@ -8,29 +8,32 @@
     <title>Snapdrop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#3367d6">
-    <meta name="color-scheme" content="dark light">
+    <!-- <meta name="color-scheme" content="dark light"> -->
+    <meta name="color-scheme" content="暗黑模式">
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-title" content="Snapdrop">
     <!-- Descriptions -->
-    <meta name="description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.">
-    <meta name="keywords" content="File, Transfer, Share, Peer2Peer">
+    <!-- <meta name="description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup."> -->
+    <meta name="description" content="即时分享图片, 视频, PDF, 并与附近设备互联. 通过P2P方式且完全开源. 无需安装, 无需注册.">
+    <!-- <meta name="keywords" content="File, Transfer, Share, Peer2Peer"> -->
+    <meta name="keywords" content="文件, 传输, 跨设备互传, 分享, P2P">
     <meta name="author" content="RobinLinus">
     <meta property="og:title" content="Snapdrop">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://snapdrop.net/">
+    <meta property="og:url" content="https://cs.lernb.com">
     <meta property="og:author" content="https://facebook.com/RobinLinus">
     <meta name="twitter:author" content="@RobinLinus">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.">
-    <meta name="og:description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.">
+    <!-- <meta name="twitter:description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup."> -->
+    <!-- <meta name="og:description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup."> -->
     <!-- Icons -->
     <link rel="icon" sizes="96x96" href="images/favicon-96x96.png">
     <link rel="shortcut icon" href="images/favicon-96x96.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <meta name="msapplication-TileImage" content="images/mstile-150x150.png">
     <link rel="fluid-icon" type="image/png" href="images/android-chrome-192x192.png">
-    <meta name="twitter:image" content="https://snapdrop.net/images/twitter-stream.jpg">
-    <meta property="og:image" content="https://snapdrop.net/images/twitter-stream.jpg">
+    <!-- <meta name="twitter:image" content="https://snapdrop.net/images/twitter-stream.jpg">
+    <meta property="og:image" content="https://snapdrop.net/images/twitter-stream.jpg"> -->
     <!-- Resources -->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="manifest" href="manifest.json">
@@ -38,22 +41,26 @@
 
 <body translate="no">
     <header class="row-reverse">
-        <a href="#about" class="icon-button" title="About Snapdrop">
+        <!-- <a href="#about" class="icon-button" title="About Snapdrop"> -->
+        <a href="#about" class="icon-button" title="关于">
             <svg class="icon">
                 <use xlink:href="#info-outline" />
             </svg>
         </a>
-        <a href="#" id="theme" class="icon-button" title="Switch Darkmode/Lightmode" >
+        <!-- <a href="#" id="theme" class="icon-button" title="Switch Darkmode/Lightmode" > -->
+        <a href="#" id="theme" class="icon-button" title="切换暗色/亮色模式" >
             <svg class="icon">
                 <use xlink:href="#icon-theme" />
             </svg>
         </a>
-        <a href="#" id="notification" class="icon-button" title="Enable Notifications" hidden>
+        <!-- <a href="#" id="notification" class="icon-button" title="Enable Notifications" hidden> -->
+        <a href="#" id="notification" class="icon-button" title="开启通知" hidden>
             <svg class="icon">
                 <use xlink:href="#notifications" />
             </svg>
         </a>
-        <a href="#" id="install" class="icon-button" title="Install Snapdrop" hidden>
+        <!-- <a href="#" id="install" class="icon-button" title="Install Snapdrop" hidden> -->
+        <a href="#" id="install" class="icon-button" title="安装 Snapdrop" hidden>
             <svg class="icon">
                 <use xlink:href="#homescreen" />
             </svg>
@@ -62,34 +69,43 @@
     <!-- Peers -->
     <x-peers class="center"></x-peers>
     <x-no-peers>
-        <h2>Open Snapdrop on other devices to send files</h2>
+        <!-- <h2>Open Snapdrop on other devices to send files</h2> -->
+        <h2>在其他设备上打开此网页即可传输文件</h2>
     </x-no-peers>
-    <x-instructions desktop="Click to send files or right click to send a message" mobile="Tap to send files or long tap to send a message"></x-instructions>
+    <!-- <x-instructions desktop="Click to send files or right click to send a message" mobile="Tap to send files or long tap to send a message"></x-instructions> -->
+    <x-instructions desktop="点击发送文件或者右键点击发送消息" mobile="点按发送文件或者长按发送消息"></x-instructions>
     <!-- Footer -->
     <footer class="column">
         <svg class="icon logo">
             <use xlink:href="#wifi-tethering" />
         </svg>
-        <div id="displayName" placeholder="The easiest way to transfer data across devices"></div>
-        <div class="font-body2">You can be discovered by everyone on this network</div>
+        <!-- <div id="displayName" placeholder="The easiest way to transfer data across devices"></div> -->
+        <div id="displayName" placeholder="最傻瓜式的跨设备文件传输方式"></div>
+        <!-- <div class="font-body2">You can be discovered by everyone on this network</div> -->
+        <div class="font-body2">本机可被同一局域网络下的其他设备发现</div>
     </footer>
     <!-- Receive Dialog -->
     <x-dialog id="receiveDialog">
         <x-background class="full center">
             <x-paper shadow="2">
-                <h3>File Received</h3>
-                <div class="font-subheading" id="fileName">Filename</div>
+                <!-- <h3>File Received</h3> -->
+                <h3>文件接收</h3>
+                <!-- <div class="font-subheading" id="fileName">Filename</div> -->
+                <div class="font-subheading" id="fileName">文件名称</div>
                 <div class="font-body2" id="fileSize"></div>
                 <div class='preview' style="visibility: hidden;">
                     <img id='img-preview' src="">
                 </div>
                 <div class="row">
-                    <label for="autoDownload" class="grow">Ask to save each file before downloading</label>
+                    <!-- <label for="autoDownload" class="grow">Ask to save each file before downloading</label> -->
+                    <label for="autoDownload" class="grow">每次下载保存前询问</label>
                     <input type="checkbox" id="autoDownload" checked="">
                 </div>
                 <div class="row-reverse">
-                    <a class="button" close id="download" title="Download File" autofocus>Save</a>
-                    <button class="button" close>Ignore</button>
+                    <!-- <a class="button" close id="download" title="Download File" autofocus>Save</a> -->
+                    <a class="button" close id="download" title="Download File" autofocus>保存</a>
+                    <!-- <button class="button" close>Ignore</button> -->
+                    <button class="button" close>忽略</button>
                 </div>
             </x-paper>
         </x-background>
@@ -99,11 +115,15 @@
         <form action="#">
             <x-background class="full center">
                 <x-paper shadow="2">
-                    <h3>Send a Message</h3>
-                    <div id="textInput" class="textarea" role="textbox" placeholder="Send a message" autocomplete="off" autofocus contenteditable></div>
+                    <!-- <h3>Send a Message</h3> -->
+                    <h3>发送消息</h3>
+                    <!-- <div id="textInput" class="textarea" role="textbox" placeholder="Send a message" autocomplete="off" autofocus contenteditable></div> -->
+                    <div id="textInput" class="textarea" role="textbox" placeholder="发送一条消息" autocomplete="off" autofocus contenteditable></div>
                     <div class="row-reverse">
-                        <button class="button" type="submit" close>Send</button>
-                        <a class="button" close>Cancel</a>
+                        <!-- <button class="button" type="submit" close>Send</button> -->
+                        <button class="button" type="submit" close>发送</button>
+                        <!-- <a class="button" close>Cancel</a> -->
+                        <a class="button" close>取消</a>
                     </div>
                 </x-paper>
             </x-background>
@@ -113,18 +133,22 @@
     <x-dialog id="receiveTextDialog">
         <x-background class="full center">
             <x-paper shadow="2">
-                <h3>Message Received</h3>
+                <!-- <h3>Message Received</h3> -->
+                <h3>收到一条消息</h3>
                 <div class="font-subheading" id="text"></div>
                 <div class="row-reverse">
-                    <button class="button" id="copy" close autofocus>Copy</button>
-                    <button class="button" close>Close</button>
+                    <!-- <button class="button" id="copy" close autofocus>Copy</button> -->
+                    <button class="button" id="copy" close autofocus>复制内容</button>
+                    <!-- <button class="button" close>Close</button> -->
+                    <button class="button" close>关闭</button>
                 </div>
             </x-paper>
         </x-background>
     </x-dialog>
     <!-- Toast -->
     <div class="toast-container full center">
-        <x-toast class="row" shadow="1" id="toast">File Transfer Completed</x-toast>
+        <!-- <x-toast class="row" shadow="1" id="toast">File Transfer Completed</x-toast> -->
+        <x-toast class="row" shadow="1" id="toast">文件传输完成</x-toast>
     </div>
     <!-- About Page -->
     <x-about id="about" class="full center column">
@@ -140,7 +164,8 @@
                 <use xlink:href="#wifi-tethering" />
             </svg>
             <h1>Snapdrop</h1>
-            <div class="font-subheading">The easiest way to transfer files across devices</div>
+            <!-- <div class="font-subheading">The easiest way to transfer files across devices</div> -->
+            <div class="font-subheading">最傻瓜式的跨设备文件传输方式</div>
             <div class="row">
                 <a class="icon-button" target="_blank" href="https://github.com/RobinLinus/snapdrop" title="Snapdrop on Github" rel="noreferrer">
                     <svg class="icon">
@@ -224,8 +249,10 @@
     <!-- no script -->
     <noscript>
         <x-noscript class="full center column">
-            <h1>Enable JavaScript</h1>
-            <h3>Snapdrop works only with JavaScript</h3>
+            <!-- <h1>Enable JavaScript</h1> -->
+            <h1>启用JavaScript</h1>
+            <!-- <h3>Snapdrop works only with JavaScript</h3> -->
+            <h3>Snapdrop必须使用JavaScript才能正常运行</h3>
         </x-noscript>
         <style>
         x-noscript {

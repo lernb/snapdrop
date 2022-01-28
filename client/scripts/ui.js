@@ -9,7 +9,8 @@ window.iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 Events.on('display-name', e => {
     const me = e.detail.message;
     const $displayName = $('displayName')
-    $displayName.textContent = 'You are known as ' + me.displayName;
+    // $displayName.textContent = 'You are known as ' + me.displayName;
+    $displayName.textContent = '本机可被发现的设备名称「' + me.displayName + '」';
     $displayName.title = me.deviceName;
 });
 
